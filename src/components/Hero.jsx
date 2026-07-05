@@ -83,8 +83,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="text-white/60 text-[1.0625rem] leading-[1.75] max-w-[500px] mb-10"
         >
-          Cocinas, closets, vanitorios y cubiertas de granito y cuarzo.
-          Calidad, puntualidad y terminaciones impecables.
+          Más de 144 proyectos al año en el norte de Chile. Cocinas, closets,
+          vanitorios y cubiertas de granito y cuarzo. Presupuesto en 1 día, entrega puntual.
         </motion.p>
 
         <motion.div

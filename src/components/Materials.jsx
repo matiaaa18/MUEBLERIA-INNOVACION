@@ -4,23 +4,23 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation'
 const MATERIALS = [
   {
     name: 'Melamina Masisa',
-    attributes: ['Alta durabilidad', 'Amplia variedad de colores', 'Resistente a la humedad'],
-    desc: 'El estándar de la mueblería moderna en Chile. Amplia gama de colores y texturas que imitan maderas nobles, con la ventaja de ser resistente, liviana y de fácil mantención.',
+    attributes: ['Herrajes Masisa de primera línea', 'Bisagras con cierre suave', 'Correderas telescópicas + cierre suave'],
+    desc: 'Trabajamos exclusivamente con melamina y herrajes Masisa: la marca de referencia en Chile. Bisagras con cierre suave y correderas telescópicas en cada cajón. No usamos componentes de segunda categoría aunque el cliente no los vea.',
   },
   {
     name: 'MDF',
-    attributes: ['Superficie perfecta para lacado', 'Sin nudos ni vetas', 'Ideal para vanitorios premium'],
-    desc: 'La opción preferida cuando se busca una terminación lacada de alta calidad. Su superficie homogénea permite acabados muy finos, sin imperfecciones.',
+    attributes: ['Ideal para cuartos de niños', 'Sin astillas ni bordes vivos', 'Mejor relación calidad-precio en lacado'],
+    desc: 'El MDF es nuestra recomendación para muebles de dormitorio infantil y vanitorios lacados. Superficie perfectamente homogénea, sin vetas ni nudos. Más resistente a golpes que la melamina en las zonas de mayor tráfico.',
   },
   {
     name: 'Granito Natural',
-    attributes: ['100% natural', 'Cada placa es única', 'Resistente al calor y rasguños'],
-    desc: 'Piedra natural extraída de canteras, con vetas irrepetibles. Extremadamente resistente al calor, rasguños y manchas. Una inversión que dura toda la vida.',
+    attributes: ['Negro San Gabriel', 'Blanco Dallas', 'Verde Ubatuba · Gris Ocre'],
+    desc: 'Piedra natural de cantera, cada placa es irrepetible. Resistente al calor, los rasguños y las manchas. Los colores más solicitados: Negro San Gabriel, Blanco Dallas, Verde Ubatuba y Gris Ocre. Una inversión que dura décadas.',
   },
   {
     name: 'Cuarzo Engineered',
-    attributes: ['Sin mantenimiento periódico', 'Colores uniformes', 'Higiénico y sellado de fábrica'],
-    desc: '93% de cuarzo natural con resinas de alta tecnología. No necesita sellado periódico y ofrece colores más uniformes. Ideal para cocinas contemporáneas.',
+    attributes: ['Calacatta Gold', 'Negro Marquina', 'Angel White · Blanco Puro'],
+    desc: '93% cuarzo natural con resinas de alta tecnología. Sellado de fábrica: sin mantenimiento periódico. Los colores más elegidos: Calacatta Gold, Negro Marquina, Angel White y Blanco Puro. La opción preferida para cocinas contemporáneas.',
   },
 ]
 

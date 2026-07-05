@@ -4,12 +4,12 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { slideLeft, fadeUp, staggerContainer } from '../utils/animations'
 
 const VALUES = [
-  { label: 'Honestidad',            desc: 'Transparencia total en cada etapa del proyecto.' },
-  { label: 'Puntualidad',           desc: 'Plazos que se respetan, siempre.' },
-  { label: 'Calidad',               desc: 'Materiales y mano de obra de primera categoría.' },
-  { label: 'Terminaciones exactas', desc: 'Cada milímetro revisado antes de la entrega.' },
-  { label: 'Trato cercano',         desc: 'Profesionalismo con calidez humana.' },
-  { label: 'Compromiso real',       desc: 'Tu satisfacción es nuestra única meta.' },
+  { label: 'Eficaz',      desc: 'Resultados sin rodeos. Lo que prometemos, lo cumplimos en el plazo acordado.' },
+  { label: 'Prolijidad',  desc: 'Cada mueble se revisa personalmente antes de salir del taller. Ningún detalle pasa desapercibido.' },
+  { label: 'Perspicaz',   desc: 'Anticipamos problemas antes de que ocurran y proponemos soluciones que el cliente no esperaba.' },
+  { label: 'Precios reales', desc: 'No inflamos precios para luego hacer descuentos. El primer número es el número real.' },
+  { label: 'Sin atajos',  desc: 'Nunca comprometemos la seguridad ni la calidad de un proyecto por ahorrar tiempo o material.' },
+  { label: 'Trato directo', desc: 'Hablas directamente con quien fabrica e instala. Sin intermediarios, sin teléfono descompuesto.' },
 ]
 
 function Counter({ to, duration = 1600 }) {
@@ -52,17 +52,18 @@ export default function About() {
           >
             <span className="eyebrow">Sobre Nosotros</span>
             <h2 className="h2 mb-8">
-              Transformando hogares con dedicación y calidad.
+              Más de 5 años destacando por calidad y resultados que se ven.
             </h2>
             <p className="body-lg mb-5">
               <strong className="text-[var(--ink)] font-semibold">Mueblería y Marmolería Innovación</strong>{' '}
-              nació del esfuerzo, sacrificio y mucha dedicación. Desde el primer día nuestro
-              objetivo ha sido claro: destacar por la calidad de cada proyecto.
+              nació de la ilusión de salir adelante y destacar. Desde el primer día la meta fue
+              una sola: que cada proyecto hablara por sí solo.
             </p>
             <p className="body-md mb-14">
-              Con más de 5 años de experiencia combinada, hemos construido una reputación basada
-              en la confianza y en resultados que superan las expectativas. Cada proyecto es único
-              y lo tratamos como tal.
+              Tres palabras definen cómo trabajamos: <em>Eficaz, Prolijidad y Perspicaz.</em>{' '}
+              Más de 5 años de experiencia combinada en mueblería y marmolería, con proyectos que
+              van desde una cocina completa hasta cubiertas de materiales que nunca antes habíamos
+              trabajado —y siempre entregados a tiempo y sin sorpresas.
             </p>
 
             {/* Counters */}
@@ -70,7 +71,7 @@ export default function About() {
               {[
                 { to: 3, suffix: '+', label: 'Años mueblería' },
                 { to: 5, suffix: '+', label: 'Años marmolería' },
-                { to: 200, suffix: '+', label: 'Proyectos' },
+                { to: 144, suffix: '+', label: 'Proyectos al año' },
               ].map(({ to, suffix, label }, i) => (
                 <div
                   key={label}

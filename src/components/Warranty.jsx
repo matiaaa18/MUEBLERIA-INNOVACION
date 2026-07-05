@@ -4,10 +4,10 @@ import { fadeUp, staggerContainer } from '../utils/animations'
 import { HiShieldCheck, HiX } from 'react-icons/hi'
 
 const COVERS = [
-  { label: 'Estructura de muebles',  desc: 'Solidez estructural de cada mueble fabricado.' },
-  { label: 'Melamina Masisa',        desc: 'Defectos del material en condiciones normales.' },
-  { label: 'Herrajes y corredera',   desc: 'Bisagras, correderas y rieles en funcionamiento.' },
-  { label: 'Cubiertas instaladas',   desc: 'Defectos de fabricación e instalación.' },
+  { label: 'Estructura de muebles — 1 año',  desc: 'Solidez estructural de cada mueble fabricado e instalado.' },
+  { label: 'Melamina Masisa — 1 año',        desc: 'Defectos del material en condiciones normales de uso.' },
+  { label: 'Herrajes y correderas — 1 año',  desc: 'Bisagras con cierre suave, correderas telescópicas y rieles.' },
+  { label: 'Cubiertas instaladas — 1 año',   desc: 'Defectos de fabricación e instalación en granito, cuarzo, mármol y porcelanato.' },
 ]
 
 const NOT_COVERS = [
@@ -41,7 +41,9 @@ export default function Warranty() {
           <span className="eyebrow-light">Tu tranquilidad importa</span>
           <h2 className="h2-light mb-4">Garantía de nuestros trabajos</h2>
           <p className="text-white/50 text-[1.0625rem] leading-[1.75] max-w-xl">
-            Respaldamos cada proyecto porque confiamos plenamente en la calidad de lo que hacemos.
+            Soy perfeccionista y detallista: cada mueble se revisa personalmente antes de la entrega.
+            Por eso podemos dar garantía real —no de papel— en todo lo que fabricamos e instalamos.
+            Amparado en la Ley 19.496 del consumidor.
           </p>
         </motion.div>
 
@@ -99,8 +101,8 @@ export default function Warranty() {
               </ul>
               <div className="mt-6 pt-5 border-t border-white/[0.08]">
                 <p className="text-gray-500 text-[0.8125rem] leading-relaxed">
-                  Para hacer efectiva la garantía, contacta directamente con nosotros y
-                  ten a mano el número de tu proyecto.
+                  Para hacer efectiva la garantía, contáctanos directamente por WhatsApp.
+                  Garantía conforme a la Ley 19.496 del consumidor.
                 </p>
               </div>
             </div>

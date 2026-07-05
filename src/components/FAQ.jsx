@@ -7,31 +7,39 @@ import { HiChevronDown } from 'react-icons/hi'
 const FAQS = [
   {
     q: '¿Cuánto demora un proyecto?',
-    a: 'El tiempo varía según el tamaño y complejidad. Una cocina completa demora entre 2 y 4 semanas desde la fabricación hasta la instalación. Proyectos menores como vanitorios pueden estar listos antes. Te daremos un plazo exacto en el presupuesto.',
+    a: 'Una cocina completa está lista en aproximadamente 10 días hábiles desde que se confirma el proyecto. Trabajos más pequeños —un vanitorio, un mueble TV o una cubierta de reemplazo— pueden estar terminados en 5 días hábiles. El plazo exacto siempre queda indicado en el presupuesto.',
+  },
+  {
+    q: '¿Cuánto demora en llegar el presupuesto?',
+    a: 'En máximo 1 día hábil desde la visita. Medimos, calculamos y te mandamos el presupuesto detallado al día siguiente. Sin demoras, sin incertidumbre.',
   },
   {
     q: '¿Cómo puedo cotizar mi proyecto?',
-    a: 'Puedes cotizar por WhatsApp al +56 9 5858 8317, Instagram o Facebook. Te pediremos fotos y medidas básicas para una idea preliminar de precio. Luego coordinamos una visita para tomar medidas exactas y entregarte el presupuesto definitivo.',
+    a: 'Escríbenos por WhatsApp al +56 9 5858 8317, Instagram o Facebook. Con fotos y medidas básicas podemos darte una idea preliminar de precio. Luego coordinamos una visita gratuita para tomar medidas exactas y entregarte el presupuesto definitivo.',
   },
   {
     q: '¿La visita tiene costo?',
-    a: 'No. La visita para medir y conocer el proyecto es completamente gratuita y sin compromiso. Vamos a tu hogar, evaluamos el espacio y te entregamos el presupuesto de forma transparente.',
+    a: 'No. La visita para medir y conocer el espacio es completamente gratuita y sin compromiso. Vamos a tu hogar, evaluamos el proyecto y te entregamos el presupuesto de forma transparente.',
+  },
+  {
+    q: '¿Dónde está el taller?',
+    a: 'Nuestro taller está en Av. Industrial #7363, Antofagasta. Allí fabricamos todos los muebles y cubiertas antes de llevarlos a tu hogar para la instalación.',
   },
   {
     q: '¿Trabajan fuera de Antofagasta?',
-    a: 'Sí. Cubrimos Antofagasta, Calama, Mejillones, Tocopilla, Taltal y otras ciudades de la región. Para ciudades fuera de Antofagasta puede aplicar un costo de traslado que informamos con anticipación.',
+    a: 'Sí. Cubrimos Antofagasta, Calama, Mejillones, Tocopilla, Taltal y otras ciudades del norte. Para traslados fuera de Antofagasta se cobra un costo de combustible que informamos antes de agendar.',
   },
   {
-    q: '¿Qué materiales utilizan?',
-    a: 'Trabajamos principalmente con Melamina Masisa y MDF para muebles, y granito y cuarzo para cubiertas. Todos de primera calidad. Puedes ver más detalles en la sección de Materiales de esta página.',
+    q: '¿Cómo se paga y emiten factura?',
+    a: 'Aceptamos efectivo y transferencia bancaria. Sí emitimos boleta y factura. Generalmente se solicita un 50% al confirmar el proyecto y el saldo contra entrega, según se acuerde en el presupuesto.',
+  },
+  {
+    q: '¿Las cubiertas de granito o cuarzo requieren mantención?',
+    a: 'El cuarzo no requiere sellado: sale sellado de fábrica y es prácticamente sin mantenimiento. El granito se recomienda sellar cada 1 a 2 años con productos específicos para piedra natural, lo que tarda solo unos minutos y prolonga su vida útil considerablemente.',
   },
   {
     q: '¿Los proyectos tienen garantía?',
-    a: 'Sí. Garantizamos estructura, melamina, herrajes y cubiertas contra defectos de fabricación e instalación. No cubre mal uso, humedad excesiva ni modificaciones de terceros.',
-  },
-  {
-    q: '¿Cuánto debo abonar para comenzar?',
-    a: 'Generalmente se solicita un 50% al confirmar el proyecto y el saldo restante contra entrega. Esta condición se informa claramente en el presupuesto según el tamaño del trabajo.',
+    a: 'Sí. Todos los trabajos tienen 1 año de garantía en estructura, melamina, herrajes y cubiertas, contra defectos de fabricación e instalación, conforme a la Ley 19.496. No cubre mal uso, humedad excesiva ni modificaciones de terceros.',
   },
 ]
 

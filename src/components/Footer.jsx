@@ -128,8 +128,9 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <HiLocationMarker className="text-[#c8a96e] shrink-0 mt-0.5" size={16} aria-hidden="true" />
                 <div>
-                  <p className="text-white text-[0.875rem] font-medium leading-tight">Cobertura</p>
-                  <p className="text-gray-400 text-[0.8125rem] mt-1">Antofagasta · Calama y norte de Chile</p>
+                  <p className="text-white text-[0.875rem] font-medium leading-tight">Taller y cobertura</p>
+                  <p className="text-gray-400 text-[0.8125rem] mt-1">Av. Industrial #7363, Antofagasta</p>
+                  <p className="text-gray-500 text-[0.75rem] mt-0.5">Antofagasta · Calama · Norte de Chile</p>
                 </div>
               </li>
             </ul>

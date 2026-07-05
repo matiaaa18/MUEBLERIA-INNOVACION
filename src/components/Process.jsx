@@ -6,11 +6,11 @@ const STEPS = [
   { n: '02', title: 'Visita',       desc: 'Vamos hasta tu hogar para conocer el espacio en persona.' },
   { n: '03', title: 'Medición',     desc: 'Tomamos todas las medidas con precisión milimétrica.' },
   { n: '04', title: 'Diseño',       desc: 'Creamos el diseño a medida según tus gustos y necesidades.' },
-  { n: '05', title: 'Presupuesto',  desc: 'Te entregamos un presupuesto transparente sin sorpresas.' },
+  { n: '05', title: 'Presupuesto',  desc: 'En máximo 1 día hábil recibes el presupuesto detallado. Precio real, sin inflaciones ni sorpresas.' },
   { n: '06', title: 'Fabricación',  desc: 'Fabricamos cada pieza con materiales de primera calidad.' },
   { n: '07', title: 'Rectificación',desc: 'Verificamos las medidas finales antes de instalar.' },
   { n: '08', title: 'Instalación',  desc: 'Instalamos todo con cuidado, limpieza y profesionalismo.' },
-  { n: '09', title: 'Entrega',      desc: 'Te hacemos entrega del proyecto terminado y verificado.' },
+  { n: '09', title: 'Entrega',      desc: 'El dueño revisa el proyecto in situ antes de hacer entrega formal. Cero detalles sin resolver.' },
 ]
 
 export default function Process() {

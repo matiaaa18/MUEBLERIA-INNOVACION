@@ -2,12 +2,12 @@ import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const REASONS = [
-  { n: '01', title: 'Puntualidad',               desc: 'Respetamos cada plazo comprometido. Tu tiempo es tan valioso como el nuestro.' },
-  { n: '02', title: 'Garantía incluida',          desc: 'Todos nuestros trabajos tienen garantía en estructura, herrajes y cubiertas.' },
-  { n: '03', title: 'Atención Personalizada',     desc: 'Te acompañamos en cada etapa, desde la primera visita hasta la entrega final.' },
-  { n: '04', title: 'Materiales de Calidad',      desc: 'Solo usamos melamina Masisa, MDF, granito y cuarzo de primera categoría.' },
-  { n: '05', title: 'Terminaciones Perfectas',    desc: 'Revisamos cada milímetro antes de entregar. Cero detalles sin resolver.' },
-  { n: '06', title: 'Presupuestos Transparentes', desc: 'Precio claro desde el inicio. Lo que cotizamos es exactamente lo que cobras.' },
+  { n: '01', title: 'Lo económico sale caro',        desc: 'Preferimos explicarte por qué algo tiene el precio que tiene, antes que darte un número bajo y sorprenderte al final. Calidad real tiene un costo real.' },
+  { n: '02', title: 'Revisión mueble por mueble',    desc: 'Antes de salir del taller, el dueño revisa cada pieza personalmente. No sale nada que no cumpla el estándar.' },
+  { n: '03', title: 'Presupuesto en 1 día',          desc: 'Medimos, calculamos y te enviamos el presupuesto al día siguiente. Sin demorarte semanas en una decisión.' },
+  { n: '04', title: 'Precios sin inflación',         desc: 'El primer precio que te damos es el precio real. No inflamos para hacer descuentos que parecen grandes.' },
+  { n: '05', title: 'Nunca comprometemos seguridad', desc: 'Si hay una forma correcta y una forma rápida, siempre hacemos la correcta. La seguridad del cliente no se negocia.' },
+  { n: '06', title: '1 año de garantía real',        desc: 'Garantía escrita en estructura, herrajes, melamina y cubiertas. Si algo falla por fabricación, lo resolvemos nosotros.' },
 ]
 
 export default function WhyUs() {
