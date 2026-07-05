@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://muebleriainnovacion.cl/sitemap.xml
+Sitemap: https://muebleriamarmoleriainnovacion.com/sitemap.xml
 
 # Block crawlers from accessing build artifacts
 Disallow: /assets/
