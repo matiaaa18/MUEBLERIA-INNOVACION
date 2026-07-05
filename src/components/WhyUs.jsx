@@ -7,32 +7,32 @@ const REASONS = [
   {
     icon: HiClock,
     title: 'Puntualidad',
-    desc: 'Respetamos cada plazo comprometido. Tu tiempo es valioso y lo sabemos.',
+    desc: 'Respetamos cada plazo comprometido. Tu tiempo es tan valioso como el nuestro.',
   },
   {
     icon: HiShieldCheck,
-    title: 'Garantía',
-    desc: 'Todos nuestros trabajos cuentan con garantía en estructura, herrajes y cubiertas.',
+    title: 'Garantía incluida',
+    desc: 'Todos nuestros trabajos tienen garantía en estructura, herrajes y cubiertas.',
   },
   {
     icon: HiUser,
     title: 'Atención Personalizada',
-    desc: 'Te acompañamos en cada etapa del proyecto, desde la visita hasta la entrega.',
+    desc: 'Te acompañamos en cada etapa, desde la primera visita hasta la entrega.',
   },
   {
     icon: HiStar,
     title: 'Materiales de Calidad',
-    desc: 'Usamos melamina Masisa, MDF, granito y cuarzo de primera calidad.',
+    desc: 'Solo usamos melamina Masisa, MDF, granito y cuarzo de primera categoría.',
   },
   {
     icon: HiBadgeCheck,
     title: 'Terminaciones Perfectas',
-    desc: 'Cada detalle es revisado meticulosamente antes de la entrega final.',
+    desc: 'Revisamos cada milímetro antes de entregar. Cero detalles sin resolver.',
   },
   {
     icon: HiDocumentText,
-    title: 'Transparencia en los Presupuestos',
-    desc: 'Precios claros, sin sorpresas. Lo que cotizamos es lo que cobras.',
+    title: 'Presupuestos Transparentes',
+    desc: 'Precio claro desde el inicio. Lo que cotizamos es exactamente lo que cobras.',
   },
 ]
 
@@ -40,28 +40,27 @@ export default function WhyUs() {
   const { ref, isInView } = useScrollAnimation()
 
   return (
-    <section className="py-24 lg:py-32 bg-gray-950 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c8a96e]/30 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c8a96e]/30 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(200,169,110,0.08)_0%,_transparent_60%)]" />
+    <section aria-label="Por qué elegirnos" className="section-py bg-[#0d0d0d] relative overflow-hidden">
+      {/* Gradient accents */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c8a96e]/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c8a96e]/20 to-transparent" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px]"
+             style={{ background: 'radial-gradient(circle at 80% 20%, rgba(200,169,110,0.05) 0%, transparent 65%)' }} />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         <motion.div
           ref={ref}
-          className="text-center mb-16"
+          className="text-center mb-14"
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={fadeUp}
         >
-          <span className="text-[#c8a96e] text-sm font-semibold tracking-widest uppercase mb-3 block">
-            Nuestra diferencia
-          </span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            ¿Por qué elegirnos?
-          </h2>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            No somos una empresa más. Somos el equipo que se preocupa por cada milímetro de tu proyecto.
+          <span className="section-label">Nuestra diferencia</span>
+          <h2 className="section-title-light mb-4">¿Por qué elegirnos?</h2>
+          <p className="section-desc text-gray-400">
+            No somos una empresa más. Somos el equipo que se preocupa por cada detalle de tu proyecto.
           </p>
         </motion.div>
 
@@ -69,20 +68,23 @@ export default function WhyUs() {
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           {REASONS.map(({ icon: Icon, title, desc }) => (
-            <motion.div
+            <motion.article
               key={title}
               variants={fadeUp}
-              className="group bg-white/5 border border-white/8 rounded-2xl p-7 hover:bg-white/8 hover:border-[#c8a96e]/30 transition-all duration-300"
+              className="group bg-white/[0.04] border border-white/[0.07] rounded-2xl p-7
+                         hover:bg-white/[0.07] hover:border-[#c8a96e]/25
+                         transition-all duration-300 cursor-default"
             >
-              <div className="w-12 h-12 bg-[#c8a96e]/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#c8a96e]/20 transition-colors">
-                <Icon className="text-[#c8a96e]" size={22} />
+              <div className="w-11 h-11 bg-[#c8a96e]/10 rounded-xl flex items-center justify-center mb-5
+                              group-hover:bg-[#c8a96e]/18 transition-colors duration-300">
+                <Icon className="text-[#c8a96e]" size={21} aria-hidden="true" />
               </div>
-              <h3 className="text-white font-semibold text-base mb-2">{title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{desc}</p>
-            </motion.div>
+              <h3 className="text-white font-semibold text-[0.9375rem] mb-2.5 leading-snug">{title}</h3>
+              <p className="text-gray-400 text-[0.875rem] leading-relaxed">{desc}</p>
+            </motion.article>
           ))}
         </motion.div>
       </div>

@@ -1,0 +1,43 @@
+{
+  "name": "Mueblería y Marmolería Innovación",
+  "short_name": "Innovación",
+  "description": "Muebles y cubiertas a medida en Antofagasta y norte de Chile. Cocinas, closets, granito y cuarzo.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#c8a96e",
+  "lang": "es-CL",
+  "orientation": "portrait-primary",
+  "categories": ["business", "shopping"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "type": "image/jpeg",
+      "sizes": "1200x630",
+      "form_factor": "wide",
+      "label": "Mueblería y Marmolería Innovación — Landing page"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

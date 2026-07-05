@@ -1,57 +1,74 @@
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import { fadeUp, slideLeft } from '../utils/animations'
+import { fadeUp } from '../utils/animations'
 import { HiLocationMarker, HiCheckCircle } from 'react-icons/hi'
 
 const CITIES = [
-  { name: 'Antofagasta', main: true },
-  { name: 'Calama', main: true },
-  { name: 'Mejillones', main: true },
-  { name: 'Tocopilla', main: true },
-  { name: 'Taltal', main: true },
+  { name: 'Antofagasta', primary: true },
+  { name: 'Calama' },
+  { name: 'Mejillones' },
+  { name: 'Tocopilla' },
+  { name: 'Taltal' },
+]
+
+const MAP_CITIES = [
+  { cx: 98,  cy: 72,  name: 'Tocopilla',   anchor: 'right' },
+  { cx: 93,  cy: 97,  name: 'Mejillones',  anchor: 'right' },
+  { cx: 104, cy: 128, name: 'Calama',      anchor: 'right', inland: true },
+  { cx: 97,  cy: 170, name: 'Antofagasta', anchor: 'right', primary: true },
+  { cx: 101, cy: 265, name: 'Taltal',      anchor: 'right' },
 ]
 
 export default function Coverage() {
   const { ref, isInView } = useScrollAnimation()
 
   return (
-    <section id="cobertura" className="py-24 lg:py-32 bg-[#faf9f7]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Text */}
+    <section id="cobertura" aria-label="Cobertura" className="section-py bg-[#faf9f7]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+          {/* Left */}
           <motion.div
             ref={ref}
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -36 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="text-[#c8a96e] text-sm font-semibold tracking-widest uppercase mb-4 block">
-              Dónde llegamos
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-5">
+            <span className="section-label">Dónde llegamos</span>
+            <h2 className="section-title mb-5">
               Cobertura en el{' '}
               <span className="text-[#c8a96e]">Norte de Chile</span>
             </h2>
-            <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              Nos desplazamos a las principales ciudades de la zona norte, llevando calidad
-              y profesionalismo hasta tu puerta. ¿Tu ciudad no está en la lista?{' '}
-              <strong className="text-gray-700">Consúltanos igual</strong>, siempre buscamos la
-              forma de llegar.
+            <p className="text-gray-500 text-[1.0625rem] leading-[1.75] mb-8">
+              Llevamos calidad y profesionalismo hasta tu puerta en las principales ciudades del norte.
+              ¿Tu ciudad no está en la lista?{' '}
+              <strong className="text-gray-700 font-semibold">Consúltanos igual</strong> — siempre
+              buscamos la forma de llegar.
             </p>
 
-            <div className="space-y-3 mb-8">
-              {CITIES.map((city) => (
+            <div className="space-y-2.5 mb-8">
+              {CITIES.map((city, i) => (
                 <motion.div
                   key={city.name}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.1 * CITIES.indexOf(city) + 0.3 }}
-                  className="flex items-center gap-3 bg-white rounded-xl px-5 py-3.5 border border-gray-100 shadow-sm"
+                  transition={{ delay: 0.1 * i + 0.3, duration: 0.45 }}
+                  className={`flex items-center gap-3.5 rounded-xl px-5 py-3.5 border transition-colors duration-200 ${
+                    city.primary
+                      ? 'bg-[#fdf8f0] border-[#c8a96e]/25'
+                      : 'bg-white border-gray-100 hover:border-gray-200'
+                  }`}
                 >
-                  <HiCheckCircle className="text-[#4a7c59] shrink-0" size={20} />
-                  <span className="font-medium text-gray-800">{city.name}</span>
-                  {city.name === 'Antofagasta' && (
-                    <span className="ml-auto text-xs bg-[#c8a96e] text-white px-2.5 py-0.5 rounded-full font-medium">
+                  <HiCheckCircle
+                    className={city.primary ? 'text-[#c8a96e]' : 'text-[#4a7c59]'}
+                    size={20}
+                    aria-hidden="true"
+                  />
+                  <span className={`font-medium text-[0.9375rem] ${city.primary ? 'text-gray-900' : 'text-gray-700'}`}>
+                    {city.name}
+                  </span>
+                  {city.primary && (
+                    <span className="ml-auto text-[0.7rem] bg-[#c8a96e] text-white px-2.5 py-0.5 rounded-full font-bold tracking-wide uppercase">
                       Principal
                     </span>
                   )}
@@ -59,55 +76,70 @@ export default function Coverage() {
               ))}
             </div>
 
-            <div className="flex items-start gap-3 bg-[#4a7c59]/5 border border-[#4a7c59]/20 rounded-xl p-4">
-              <HiLocationMarker className="text-[#4a7c59] shrink-0 mt-0.5" size={20} />
-              <p className="text-sm text-gray-600 leading-relaxed">
-                También realizamos trabajos en <strong>otras ciudades de la región</strong>.
+            <div className="flex items-start gap-3 bg-[#4a7c59]/6 border border-[#4a7c59]/18 rounded-xl p-4">
+              <HiLocationMarker className="text-[#4a7c59] shrink-0 mt-0.5" size={18} aria-hidden="true" />
+              <p className="text-[0.875rem] text-gray-600 leading-relaxed">
+                También realizamos trabajos en <strong className="font-semibold text-gray-700">otras ciudades de la región</strong>.
                 Consulta disponibilidad y costos adicionales de traslado.
               </p>
             </div>
           </motion.div>
 
-          {/* Right: Map SVG */}
+          {/* Right: SVG Map */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative flex items-center justify-center"
+            className="flex items-center justify-center"
           >
-            <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 w-full max-w-sm mx-auto">
-              {/* Simplified Chile Norte SVG */}
-              <svg viewBox="0 0 200 400" className="w-full max-h-80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Chile silhouette simplified - norte region */}
+            <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 w-full max-w-[340px] mx-auto">
+              <p className="text-[0.7rem] font-bold text-gray-400 tracking-[0.16em] uppercase text-center mb-5">
+                Región de Antofagasta
+              </p>
+              <svg
+                viewBox="0 0 200 380"
+                className="w-full max-h-72"
+                aria-label="Mapa del norte de Chile con ciudades de cobertura"
+                role="img"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Region background blob */}
+                <ellipse cx="100" cy="195" rx="42" ry="165" fill="#e8f0eb" stroke="#4a7c59" strokeWidth="1.5" strokeLinejoin="round" />
+                {/* Coast line refinement */}
                 <path
-                  d="M100 20 C90 25, 80 30, 75 40 L70 60 C65 75, 60 85, 62 100 L65 120 C63 135, 60 150, 58 165 L55 185 C52 200, 50 215, 48 230 L45 250 C43 265, 40 280, 42 295 L45 315 C47 330, 50 345, 55 360 L60 375 C65 385, 72 392, 80 395 L90 398 C95 399, 100 400, 105 399 L115 396 C122 393, 128 388, 132 380 L137 365 C140 352, 140 338, 138 325 L135 308 C133 293, 130 278, 128 263 L125 243 C124 228, 122 213, 120 198 L118 178 C117 163, 115 148, 113 133 L111 113 C110 98, 108 83, 107 68 L106 48 C104 36, 102 25, 100 20Z"
-                  fill="#e8f0eb"
+                  d="M85 30 C80 45 76 65 74 85 C72 108 71 128 72 148 C73 168 74 188 76 208 C78 228 80 250 82 270 C84 290 86 310 88 330 L100 348 L112 330 C114 310 116 290 118 270 C120 250 122 228 124 208 C126 188 127 168 128 148 C129 128 128 108 126 85 C124 65 120 45 115 30 Z"
+                  fill="#d0e5d6"
                   stroke="#4a7c59"
-                  strokeWidth="1.5"
+                  strokeWidth="0.8"
                 />
+
                 {/* City markers */}
-                {[
-                  { x: 95, y: 80, name: 'Tocopilla' },
-                  { x: 100, y: 130, name: 'Calama' },
-                  { x: 95, y: 175, name: 'Antofagasta' },
-                  { x: 88, y: 100, name: 'Mejillones' },
-                  { x: 100, y: 270, name: 'Taltal' },
-                ].map((city) => (
+                {MAP_CITIES.map((city) => (
                   <g key={city.name}>
-                    <circle cx={city.x} cy={city.y} r="5" fill="#c8a96e" />
-                    <circle cx={city.x} cy={city.y} r="8" fill="#c8a96e" fillOpacity="0.3" />
+                    {city.primary && (
+                      <circle cx={city.cx} cy={city.cy} r="12" fill="#c8a96e" fillOpacity="0.12" />
+                    )}
+                    <circle cx={city.cx} cy={city.cy} r={city.primary ? 5.5 : 4}
+                            fill={city.primary ? '#c8a96e' : '#4a7c59'} />
+                    <circle cx={city.cx} cy={city.cy} r={city.primary ? 8.5 : 6.5}
+                            fill={city.primary ? '#c8a96e' : '#4a7c59'} fillOpacity="0.2" />
+                    <text
+                      x={city.cx + 12}
+                      y={city.cy + 3.5}
+                      fontSize={city.primary ? '8.5' : '7'}
+                      fill={city.primary ? '#c8a96e' : '#4a4a4a'}
+                      fontFamily="system-ui, sans-serif"
+                      fontWeight={city.primary ? 'bold' : '500'}
+                    >
+                      {city.name}
+                    </text>
                   </g>
                 ))}
-                {/* Labels */}
-                <text x="110" y="84" fontSize="7" fill="#555" fontFamily="system-ui">Tocopilla</text>
-                <text x="105" y="104" fontSize="7" fill="#555" fontFamily="system-ui">Mejillones</text>
-                <text x="110" y="134" fontSize="7" fill="#555" fontFamily="system-ui">Calama</text>
-                <text x="107" y="179" fontSize="8" fill="#c8a96e" fontFamily="system-ui" fontWeight="bold">Antofagasta</text>
-                <text x="107" y="274" fontSize="7" fill="#555" fontFamily="system-ui">Taltal</text>
               </svg>
-              <div className="mt-4 text-center">
-                <p className="text-xs text-gray-400 font-medium tracking-wider uppercase">Norte de Chile</p>
-              </div>
+              <p className="text-[0.7rem] text-gray-400 text-center mt-4">
+                ● Ciudad principal &nbsp;&nbsp; ● Ciudades de cobertura
+              </p>
             </div>
           </motion.div>
         </div>

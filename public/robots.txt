@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muebleriainnovacion.cl/sitemap.xml
+
+# Block crawlers from accessing build artifacts
+Disallow: /assets/
+
+# Allow major crawlers explicitly
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

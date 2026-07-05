@@ -18,7 +18,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <About />
         <Services />
