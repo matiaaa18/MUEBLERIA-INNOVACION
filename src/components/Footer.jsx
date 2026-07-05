@@ -26,11 +26,23 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className="mb-5">
-              <span className="font-extrabold text-[1.125rem] text-white block leading-tight">
-                Mueblería & Marmolería
-              </span>
-              <span className="text-[#c8a96e] font-bold tracking-[0.2em] text-[0.65rem] uppercase mt-1 block">
-                Innovación
+              {/* Logo with white bg — shown in a small dark pill so it reads on dark footer */}
+              <img
+                src="/logo.png"
+                alt="Mueblería y Marmolería Innovación"
+                className="h-14 w-auto object-contain rounded-lg bg-white/95 px-2 py-1"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  e.currentTarget.nextElementSibling.style.display = 'flex'
+                }}
+              />
+              <span className="hidden flex-col">
+                <span className="font-extrabold text-[1.125rem] text-white block leading-tight">
+                  Mueblería & Marmolería
+                </span>
+                <span style={{ color: 'var(--wood)' }} className="font-bold tracking-[0.2em] text-[0.65rem] uppercase mt-1 block">
+                  Innovación
+                </span>
               </span>
             </div>
             <p className="text-gray-400 text-[0.875rem] leading-[1.75] max-w-xs mb-7">

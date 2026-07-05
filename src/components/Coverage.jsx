@@ -23,8 +23,8 @@ export default function Coverage() {
   const { ref, isInView } = useScrollAnimation()
 
   return (
-    <section id="cobertura" aria-label="Cobertura" className="section-py bg-[#faf9f7]">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+    <section id="cobertura" aria-label="Cobertura" className="section-outer bg-[#faf9f7]">
+      <div className="section-inner">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
           {/* Left */}
@@ -34,10 +34,10 @@ export default function Coverage() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="section-label">Dónde llegamos</span>
-            <h2 className="section-title mb-5">
+            <span className="eyebrow">Dónde llegamos</span>
+            <h2 className="h2 mb-5">
               Cobertura en el{' '}
-              <span className="text-[#c8a96e]">Norte de Chile</span>
+              <span style={{ color: 'var(--wood)' }}>Norte de Chile</span>
             </h2>
             <p className="text-gray-500 text-[1.0625rem] leading-[1.75] mb-8">
               Llevamos calidad y profesionalismo hasta tu puerta en las principales ciudades del norte.

@@ -22,7 +22,7 @@ export default function Warranty() {
   const { ref, isInView } = useScrollAnimation()
 
   return (
-    <section id="garantia" aria-label="Garantía" className="section-py bg-[#0d0d0d] relative overflow-hidden">
+    <section id="garantia" aria-label="Garantía" className="section-outer bg-[#0d0d0d] relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c8a96e]/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c8a96e]/20 to-transparent" />
@@ -30,17 +30,17 @@ export default function Warranty() {
              style={{ background: 'radial-gradient(circle at 20% 90%, rgba(74,124,89,0.06) 0%, transparent 60%)' }} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+      <div className="section-inner relative z-10">
         <motion.div
           ref={ref}
-          className="text-center mb-14"
-          initial={{ opacity: 0, y: 28 }}
+          className="mb-14"
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.65 }}
         >
-          <span className="section-label">Tu tranquilidad importa</span>
-          <h2 className="section-title-light mb-4">Garantía de nuestros trabajos</h2>
-          <p className="section-desc text-gray-400">
+          <span className="eyebrow-light">Tu tranquilidad importa</span>
+          <h2 className="h2-light mb-4">Garantía de nuestros trabajos</h2>
+          <p className="text-white/50 text-[1.0625rem] leading-[1.75] max-w-xl">
             Respaldamos cada proyecto porque confiamos plenamente en la calidad de lo que hacemos.
           </p>
         </motion.div>

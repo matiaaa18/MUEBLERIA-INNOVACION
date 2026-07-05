@@ -4,21 +4,21 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { fadeUp, staggerContainer } from '../utils/animations'
 import { HiX, HiZoomIn, HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
-const CATEGORIES = ['Todos', 'Cocinas', 'Closets', 'Baños', 'Cubiertas', 'Antes y Después']
+const CATEGORIES = ['Todos', 'Cocinas', 'Closets', 'Baños', 'Cubiertas', 'Muebles TV']
 
 const PROJECTS = [
-  { id: 1,  category: 'Cocinas',        title: 'Cocina moderna en blanco', folder: 'cocinas',       file: '01.jpg' },
-  { id: 2,  category: 'Cocinas',        title: 'Cocina con isla central',   folder: 'cocinas',       file: '02.jpg' },
-  { id: 3,  category: 'Cocinas',        title: 'Cocina en roble natural',   folder: 'cocinas',       file: '03.jpg' },
-  { id: 4,  category: 'Cocinas',        title: 'Cocina + cubierta cuarzo',  folder: 'cocinas',       file: '04.jpg' },
-  { id: 5,  category: 'Closets',        title: 'Walk in Closet matrimonial',folder: 'closets',       file: '01.jpg' },
-  { id: 6,  category: 'Closets',        title: 'Closet empotrado completo', folder: 'closets',       file: '02.jpg' },
-  { id: 7,  category: 'Baños',          title: 'Vanitorio flotante moderno',folder: 'banos',         file: '01.jpg' },
-  { id: 8,  category: 'Baños',          title: 'Mueble baño con espejo',    folder: 'banos',         file: '02.jpg' },
-  { id: 9,  category: 'Cubiertas',      title: 'Cubierta de granito negro', folder: 'granito',       file: '01.jpg' },
-  { id: 10, category: 'Cubiertas',      title: 'Cubierta de cuarzo blanco', folder: 'cuarzo',        file: '01.jpg' },
-  { id: 11, category: 'Antes y Después',title: 'Cocina: antes y después',   folder: 'antes-despues', file: '01.jpg' },
-  { id: 12, category: 'Antes y Después',title: 'Closet: transformación',    folder: 'antes-despues', file: '02.jpg' },
+  { id: 1,  category: 'Cocinas',   title: 'Cocina antracita + cubierta cuarzo blanco',  folder: 'cocinas',  file: '01.jpg' },
+  { id: 2,  category: 'Cocinas',   title: 'Cocina crema con tiradores dorados',          folder: 'cocinas',  file: '02.jpg' },
+  { id: 3,  category: 'Cocinas',   title: 'Cocina en L con cubierta cuarzo blanco',      folder: 'cocinas',  file: '03.jpg' },
+  { id: 4,  category: 'Cocinas',   title: 'Cocina moderna',                              folder: 'cocinas',  file: '04.jpg' },
+  { id: 5,  category: 'Closets',   title: 'Walk in Closet matrimonial',                  folder: 'closets',  file: '01.jpg' },
+  { id: 6,  category: 'Closets',   title: 'Closet empotrado completo',                   folder: 'closets',  file: '02.jpg' },
+  { id: 7,  category: 'Cubiertas', title: 'Cubierta granito negro galaxy',               folder: 'granito',  file: '01.jpg' },
+  { id: 8,  category: 'Cubiertas', title: 'Cubierta cuarzo blanco sparkle',              folder: 'cuarzo',   file: '01.jpg' },
+  { id: 9,  category: 'Cubiertas', title: 'Barra de cuarzo blanco con repisas',          folder: 'cuarzo',   file: '02.jpg' },
+  { id: 10, category: 'Muebles TV', title: 'Mesa TV con cubierta de granito negro',      folder: 'tv',       file: '01.jpg' },
+  { id: 11, category: 'Baños',     title: 'Vanitorio flotante moderno',                  folder: 'banos',    file: '01.jpg' },
+  { id: 12, category: 'Baños',     title: 'Mueble baño con espejo',                      folder: 'banos',    file: '02.jpg' },
 ]
 
 function ProjectCard({ project, onClick }) {
@@ -102,20 +102,17 @@ export default function Projects() {
   }, [lightbox, navigate, closeLightbox])
 
   return (
-    <section id="proyectos" aria-label="Galería de proyectos" className="section-py bg-white">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+    <section id="proyectos" aria-label="Galería de proyectos" className="section-outer bg-white">
+      <div className="section-inner">
         <motion.div
           ref={ref}
-          className="text-center mb-12"
+          className="mb-12"
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={fadeUp}
         >
-          <span className="section-label">Nuestro trabajo</span>
-          <h2 className="section-title mb-4">Galería de Proyectos</h2>
-          <p className="section-desc">
-            Cada proyecto cuenta una historia de transformación. Aquí algunas de ellas.
-          </p>
+          <span className="eyebrow">Nuestro trabajo</span>
+          <h2 className="h2">Galería de Proyectos</h2>
         </motion.div>
 
         {/* Filter tabs */}

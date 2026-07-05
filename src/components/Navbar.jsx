@@ -59,16 +59,24 @@ export default function Navbar() {
           <a
             href="#inicio"
             onClick={(e) => { e.preventDefault(); handleLink('#inicio') }}
-            className="flex flex-col leading-none group"
             aria-label="Mueblería y Marmolería Innovación — Inicio"
+            className="flex items-center"
           >
-            <span className={`font-extrabold text-[1.05rem] tracking-tight transition-colors duration-300 ${
-              scrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-              Mueblería & Marmolería
-            </span>
-            <span className="text-[#c8a96e] text-[0.65rem] font-bold tracking-[0.22em] uppercase mt-0.5">
-              Innovación
+            {/* Logo image — shown when navbar is white (scrolled) */}
+            <img
+              src="/logo.png"
+              alt="Mueblería y Marmolería Innovación"
+              className={`h-11 w-auto object-contain transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0 absolute pointer-events-none'}`}
+              onError={(e) => { e.currentTarget.style.display = 'none' }}
+            />
+            {/* Text logo — shown on dark/transparent navbar */}
+            <span className={`flex flex-col leading-none transition-opacity duration-300 ${scrolled ? 'opacity-0 absolute pointer-events-none' : 'opacity-100'}`}>
+              <span className="font-extrabold text-[1.05rem] tracking-tight text-white">
+                Mueblería & Marmolería
+              </span>
+              <span style={{ color: 'var(--wood)' }} className="text-[0.65rem] font-bold tracking-[0.22em] uppercase mt-0.5">
+                Innovación
+              </span>
             </span>
           </a>
 
@@ -103,7 +111,7 @@ export default function Navbar() {
               href={WHATSAPP_FULL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-sm !px-5 !py-2.5"
+              className="btn btn-primary !text-sm !px-5 !py-2.5"
             >
               Cotizar gratis
             </a>
@@ -163,7 +171,7 @@ export default function Navbar() {
                       href={WHATSAPP_FULL_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary w-full justify-center !text-sm"
+                      className="btn btn-primary w-full justify-center !text-sm"
                       onClick={() => setMenuOpen(false)}
                     >
                       Cotizar gratis

@@ -38,23 +38,22 @@ const FAQS = [
 function FAQItem({ item, index, isOpen, onToggle }) {
   const id = `faq-answer-${index}`
   return (
-    <motion.div variants={fadeUp} className="border border-gray-100 rounded-2xl overflow-hidden bg-white shadow-sm">
+    <motion.div variants={fadeUp} className="border-b border-black/[0.06]">
       <button
         id={`faq-btn-${index}`}
         aria-expanded={isOpen}
         aria-controls={id}
         onClick={() => onToggle(index)}
-        className="w-full flex items-center justify-between px-6 py-5 text-left
-                   hover:bg-gray-50/70 transition-colors duration-150 cursor-pointer"
+        className="w-full flex items-center justify-between py-5 text-left gap-5 cursor-pointer"
       >
-        <span className="font-semibold text-gray-900 pr-5 text-[0.9375rem] leading-snug">{item.q}</span>
+        <span className="font-semibold text-[var(--ink)] text-[0.9375rem] leading-snug">{item.q}</span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.22 }}
-          className="shrink-0"
+          className="shrink-0 text-[var(--wood)]"
           aria-hidden="true"
         >
-          <HiChevronDown className="text-[#c8a96e]" size={20} />
+          <HiChevronDown size={18} />
         </motion.span>
       </button>
       <AnimatePresence initial={false}>
@@ -63,15 +62,13 @@ function FAQItem({ item, index, isOpen, onToggle }) {
             id={id}
             role="region"
             aria-labelledby={`faq-btn-${index}`}
-            initial={{ height: 0 }}
-            animate={{ height: 'auto' }}
-            exit={{ height: 0 }}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
             className="overflow-hidden"
           >
-            <p className="px-6 pb-6 text-gray-500 text-[0.9rem] leading-[1.75] border-t border-gray-50 pt-4">
-              {item.a}
-            </p>
+            <p className="pb-6 body-md pr-8">{item.a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -86,32 +83,31 @@ export default function FAQ() {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i)
 
   return (
-    <section id="faq" aria-label="Preguntas frecuentes" className="section-py bg-[#faf9f7]">
-      <div className="max-w-3xl mx-auto px-5 sm:px-8">
-        <motion.div
-          ref={ref}
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 28 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="section-label">Resolvemos tus dudas</span>
-          <h2 className="section-title mb-4">Preguntas Frecuentes</h2>
-          <p className="section-desc">
-            Todo lo que necesitas saber antes de comenzar tu proyecto.
-          </p>
-        </motion.div>
+    <section id="faq" aria-label="Preguntas frecuentes" className="section-outer bg-[#faf9f7]">
+      <div className="section-inner">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            ref={ref}
+            className="mb-14"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.65 }}
+          >
+            <span className="eyebrow">Resolvemos tus dudas</span>
+            <h2 className="h2">Preguntas Frecuentes</h2>
+          </motion.div>
 
-        <motion.div
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.07 } } }}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          className="space-y-3"
-        >
-          {FAQS.map((item, i) => (
-            <FAQItem key={i} item={item} index={i} isOpen={openIndex === i} onToggle={toggle} />
-          ))}
-        </motion.div>
+          <motion.div
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.07 } } }}
+            initial="hidden"
+            animate={isInView ? 'visible' : 'hidden'}
+            className="border-t border-black/[0.06]"
+          >
+            {FAQS.map((item, i) => (
+              <FAQItem key={i} item={item} index={i} isOpen={openIndex === i} onToggle={toggle} />
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   )
