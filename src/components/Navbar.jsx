@@ -64,7 +64,7 @@ export default function Navbar() {
           >
             {/* Logo image — shown when navbar is white (scrolled) */}
             <img
-              src="/logo.png"
+              src="/logo.svg"
               alt="Mueblería y Marmolería Innovación"
               className={`h-11 w-auto object-contain transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0 absolute pointer-events-none'}`}
               onError={(e) => { e.currentTarget.style.display = 'none' }}

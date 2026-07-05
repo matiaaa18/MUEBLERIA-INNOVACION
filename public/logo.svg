@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 375" fill="none">
+  <!-- Upper cabinets body -->
+  <rect x="30" y="30" width="360" height="108" rx="4" fill="#3d2410"/>
+
+  <!-- Upper cabinet door lines (vertical dividers) -->
+  <line x1="117" y1="30" x2="117" y2="138" stroke="#5a3520" stroke-width="2"/>
+  <line x1="204" y1="30" x2="204" y2="138" stroke="#5a3520" stroke-width="2"/>
+  <line x1="291" y1="30" x2="291" y2="138" stroke="#5a3520" stroke-width="2"/>
+
+  <!-- Upper cabinet door panels (inset lines) -->
+  <rect x="40"  y="40" width="68" height="86" rx="2" stroke="#5a3520" stroke-width="1.5" fill="none"/>
+  <rect x="127" y="40" width="68" height="86" rx="2" stroke="#5a3520" stroke-width="1.5" fill="none"/>
+  <rect x="214" y="40" width="68" height="86" rx="2" stroke="#5a3520" stroke-width="1.5" fill="none"/>
+  <rect x="301" y="40" width="78" height="86" rx="2" stroke="#5a3520" stroke-width="1.5" fill="none"/>
+
+  <!-- Upper cabinet handles -->
+  <rect x="68"  y="80" width="12" height="5" rx="2.5" fill="#c8a96e"/>
+  <rect x="155" y="80" width="12" height="5" rx="2.5" fill="#c8a96e"/>
+  <rect x="242" y="80" width="12" height="5" rx="2.5" fill="#c8a96e"/>
+  <rect x="329" y="80" width="12" height="5" rx="2.5" fill="#c8a96e"/>
+
+  <!-- Wood grain texture on upper cabinets (subtle horizontal lines) -->
+  <line x1="31"  y1="55"  x2="116" y2="55"  stroke="#4a2c14" stroke-width="0.8" opacity="0.5"/>
+  <line x1="31"  y1="70"  x2="116" y2="70"  stroke="#4a2c14" stroke-width="0.8" opacity="0.5"/>
+  <line x1="31"  y1="95"  x2="116" y2="95"  stroke="#4a2c14" stroke-width="0.8" opacity="0.5"/>
+  <line x1="31"  y1="115" x2="116" y2="115" stroke="#4a2c14" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Countertop / marble slab -->
+  <rect x="20" y="138" width="380" height="22" rx="2" fill="#e8e4de"/>
+  <!-- Marble veins -->
+  <path d="M60 140 Q120 148 180 142 Q240 136 300 145 Q340 150 390 143" stroke="#ccc8c0" stroke-width="1.2" fill="none" opacity="0.7"/>
+  <path d="M30 152 Q90 146 150 155 Q210 162 280 150 Q330 142 400 154" stroke="#ccc8c0" stroke-width="0.8" fill="none" opacity="0.5"/>
+
+  <!-- Backsplash area (marble) -->
+  <rect x="30" y="160" width="360" height="30" fill="#ede9e3"/>
+  <path d="M30 165 Q100 172 200 163 Q300 154 390 168" stroke="#d4cfc7" stroke-width="1" fill="none" opacity="0.6"/>
+
+  <!-- Extractor hood (center) -->
+  <path d="M165 160 L175 190 L245 190 L255 160 Z" fill="#2e1a0a"/>
+  <rect x="178" y="186" width="64" height="8" rx="2" fill="#3d2410"/>
+
+  <!-- Lower cabinets body -->
+  <rect x="30" y="190" width="360" height="110" rx="4" fill="#3d2410"/>
+
+  <!-- Lower cabinet dividers -->
+  <line x1="120" y1="190" x2="120" y2="300" stroke="#5a3520" stroke-width="2"/>
+  <line x1="210" y1="190" x2="210" y2="300" stroke="#5a3520" stroke-width="2"/>
+  <line x1="300" y1="190" x2="300" y2="300" stroke="#5a3520" stroke-width="2"/>
+
+  <!-- Lower cabinet panels -->
+  <rect x="40"  y="200" width="70" height="88" rx="2" stroke="#5a3520" stroke-width="1.5" fill="none"/>
+  <rect x="130" y="200" width="70" height="88" rx="2" stroke="#5a3520" stroke-width="1.5" fill="none"/>
+  <rect x="220" y="200" width="70" height="88" rx="2" stroke="#5a3520" stroke-width="1.5" fill="none"/>
+  <rect x="310" y="200" width="70" height="88" rx="2" stroke="#5a3520" stroke-width="1.5" fill="none"/>
+
+  <!-- Lower cabinet handles -->
+  <rect x="68"  y="242" width="14" height="5" rx="2.5" fill="#c8a96e"/>
+  <rect x="158" y="242" width="14" height="5" rx="2.5" fill="#c8a96e"/>
+  <rect x="248" y="242" width="14" height="5" rx="2.5" fill="#c8a96e"/>
+  <rect x="338" y="242" width="14" height="5" rx="2.5" fill="#c8a96e"/>
+
+  <!-- Wood grain texture on lower cabinets -->
+  <line x1="31"  y1="215" x2="119" y2="215" stroke="#4a2c14" stroke-width="0.8" opacity="0.5"/>
+  <line x1="31"  y1="235" x2="119" y2="235" stroke="#4a2c14" stroke-width="0.8" opacity="0.5"/>
+  <line x1="31"  y1="265" x2="119" y2="265" stroke="#4a2c14" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Decorative items on counter -->
+  <!-- Jug left -->
+  <ellipse cx="65" cy="158" rx="8" ry="4" fill="#2e1a0a"/>
+  <rect x="59" y="142" width="12" height="16" rx="4" fill="#3d2410"/>
+  <path d="M71 147 Q78 147 78 152 Q78 157 71 157" stroke="#3d2410" stroke-width="2" fill="none"/>
+
+  <!-- Plant right -->
+  <rect x="337" y="150" width="10" height="10" rx="2" fill="#2e1a0a"/>
+  <ellipse cx="342" cy="148" rx="8" ry="6" fill="#2d4a1e"/>
+  <path d="M338 145 Q342 138 346 145" stroke="#3d5a28" stroke-width="1.5" fill="none"/>
+
+  <!-- Bottle right -->
+  <rect x="318" y="143" width="7" height="18" rx="3" fill="#2e1a0a"/>
+  <rect x="320" y="139" width="3" height="6" rx="1" fill="#2e1a0a"/>
+
+  <!-- Text: MUEBLERÍA Y MARMOLERÍA -->
+  <text
+    x="210"
+    y="326"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="22"
+    font-weight="400"
+    fill="#5c2d00"
+    text-anchor="middle"
+    letter-spacing="2"
+  >MUEBLERÍA Y MARMOLERÍA</text>
+
+  <!-- Text: INNOVACIÓN -->
+  <text
+    x="210"
+    y="358"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="42"
+    font-weight="700"
+    fill="#3d1800"
+    text-anchor="middle"
+    letter-spacing="3"
+  >INNOVACIÓN</text>
+</svg>

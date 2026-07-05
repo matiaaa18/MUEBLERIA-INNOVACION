@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="mb-5">
               {/* Logo with white bg — shown in a small dark pill so it reads on dark footer */}
               <img
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Mueblería y Marmolería Innovación"
                 className="h-14 w-auto object-contain rounded-lg bg-white/95 px-2 py-1"
                 onError={(e) => {
